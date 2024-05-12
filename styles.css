@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.wrapper {
+  max-width: 50%;
+  width: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    max-width: 90%;
+    width: 90%;
+  }
+}
+
+
+::selection {
+  background-color: #fff000;
+  color: #177d28;
+}
+
+hr {
+  border-color: white;
+}
+
+.hfm-plyr {
+  background-color: #177d28;
+  padding: 10px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10000;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.stn-lg-ply-wrpr {
+  width: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  z-index: 1000;
+  float: left;
+}
+
+.stn-lg {
+  width: 100px;
+  position: relative;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.ply-btn {
+  background-image: url('https://cdn.harmony-bot.de/img/play-solid.png');
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 20000;
+  background-size: contain;
+  top: 25px;
+  left: 23px;
+  opacity: .8;
+  display: block;
+  cursor: pointer;
+}
+
+.pse-btn {
+  background-image: url('https://cdn.harmony-bot.de/img/pause-solid.png');
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 20000;
+  background-size: contain;
+  top: 25px;
+  left: 23px;
+  opacity: .8;
+  display: none;
+  cursor: pointer;
+}
+
+.stn-dtl {
+  padding-top: 15px;
+  position: absolute;
+  margin-left: 120px;
+}
+
+.stn-nme {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 19px;
+  position: relative;
+  margin-bottom: -4px;
+}
+
+.stn-status {
+  font-size: 12px;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #fff000;
+}
+
+.news {
+  padding: 10px;
+  background-color: #177d28;
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10000;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.news h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.news ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.news ul li {
+  margin-bottom: 5px;
+}
+
+.news ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.news ul li a:hover {
+  text-decoration: underline;
+}
+
+.news-content {
+  padding: 20px;
+  background-color: #177d28;
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+}
+
+.news-content div {
+  display: none;
+}
+
+.news-content div:first-child {
+  display: block;
+}
+
+.footer {
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.5);
+  background-color: #177d28;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 0 10px;
+  width: 100%;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #333;
+  color: #fff;
+}
+td {
+  border-bottom: 0px solid #ccc;
+}
+.cover {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+form {
+  align-items: center;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #ffffff;
+  color: #177d28;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #fff000;
+}
