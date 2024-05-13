@@ -11,12 +11,12 @@
     <meta property="twitter:image" content="https://radio3fm.de/logo.png" />
     <link rel="shortcut icon" href="https://radio3fm.de/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-	<script type="text/javascript" src="//api.laut.fm/js_tools/lautfm_js_tools.0.10.0.js.min.js" ></script>
 
     <!-- Title -->
     <title>Hör Radio3FM - Das beste von Heute!</title>
 
     <!-- Javascript -->
+	<script type="text/javascript" src="//api.laut.fm/js_tools/lautfm_js_tools.0.10.0.js.min.js" ></script>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
