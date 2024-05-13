@@ -11,6 +11,7 @@
     <meta property="twitter:image" content="https://radio3fm.de/logo.png" />
     <link rel="shortcut icon" href="https://radio3fm.de/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="//api.laut.fm/js_tools/lautfm_js_tools.0.10.0.js.min.js" ></script>
 
     <!-- Title -->
     <title>Hör Radio3FM - Das beste von Heute!</title>
@@ -22,7 +23,6 @@
 </head>
 
 <body>
-    <script type="text/javascript" src="https://player.radioking.io/scripts/iframe.bundle.js"></script>
     <div class="wrapper">
 
         <div class="hfm-plyr">
@@ -32,7 +32,15 @@
                 <img src="https://radio3fm.de/logo.png" class="stn-lg" draggable="false" />
             </div>
             <div class="stn-dtl">
-                <a style="font-size: 25px;">Radio3FM</a><br>Das beste von Heute!
+                <b style="font-size: 25px;">Radio3FM</b>
+				<div id="api_lfm_current_song1">Das beste von Heute!</div>
+<script type="text/html" id="current_song_template1" charset="utf-8">
+<%= "<b>On Air: </b>" + this.artist.name + " - " + this.title %>
+</script> 
+<script type="text/javascript" charset="utf-8"> laut.fm.station('radio3fm') 
+.current_song({container:'api_lfm_current_song1', template:'current_song_template1'}, true);
+</script>
+
             </div>
             <audio class="hfm-lva" src="" preload="none">
                 Your browser does not support HTML5 audio.
@@ -43,7 +51,7 @@
             <h3>
                 <a class="link" id="1" href="startseite" draggable="false">Startseite</a>
                 ·
-                <a class="link" id="2" href="neue-songs" draggable="false">Neu hinzugefügt</a>
+                <a class="link" id="2" href="neue-musik" draggable="false">Neu hinzugefügt</a>
                 ·
                 <a class="link" id="3" href="neuigkeiten" draggable="false">Neuigkeiten</a>
             </h3>
@@ -65,9 +73,9 @@
                     <tbody>
                         <tr>
                             <td class="cover"><img
-                                    src=""
+                                    src="https://radio3fm.de/logo.png"
                                     class="cover"></td>
-                            <td><strong></strong><br><sup></sup></td>
+                            <td><strong>Radio3FM Playlist</strong><br><sup>Radio3FM Redaktion</sup></td>
                         </tr>
                     </tbody>
                 </table>
@@ -75,22 +83,24 @@
             <div id="content-3" style="display:none;">
                 <h1 style="border-bottom: solid 2px #fff000">Neuigkeiten</h1>
                 <p>
-					<b>12.05.2024 - 22:12 Uhr</b>
+					<b>12.05.2024 - 22:13 Uhr</b>
 					<br>
 					Endlich auf LAUT.FM! 🎉📻
+					|
+					<b>🔴 WE ARE BACK ON AIR</b>
 				</p>
 				<hr>
                 <p>
 					<b>12.05.2024 - 22:12 Uhr</b>
 					<br>
-					Wir sind auf Instagram : @radio3fm.de
+					Wir sind auf Instagram 📸📱 @radio3fm.de
 				</p>
 				<hr>
                 <p>
 					<b>15.04.2024- 09:47 Uhr</b>
 					<br>
 					Derzeit keine Verbindung zum Server möglich.
-					<br>
+					|
 					<b>⚫ OFFLINE</b>
 				</p>
 				<hr>
@@ -98,7 +108,7 @@
 					<b>10.03.2024- 17:24 Uhr</b>
 					<br>
 					Wir sind dann mal Live für euch - Wie Geil ist das denn
-					<br>
+					|
 					<b>🔴 LIVE ON AIR</b>
 				</p>
 				<hr>
@@ -116,9 +126,9 @@
                 <p>Marie-Curie-Platz 4<br>88046 Friedrichshafen</p>
             
                 <h2>Kontakt:</h2>
-                <p>E-Mail: <b class="link">hello@jaybelife.de</b>
+                <p>E-Mail: hello@jaybelife.de
 					<br>
-					Telefon: <b class="link">0152 05405281</b>
+					Telefon: 0152 05405281
                 </p>
 				
 				<h2>Design und Realisierung:</h2>
@@ -139,13 +149,11 @@
                     <li>Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu aktualisieren. Änderungen werden auf dieser Website veröffentlicht.</li>
                 </ul>
             </div>
-            
-            
 
             <div id="content-5" style="display:none;">
                 <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $to_email = 'hello@jaybelife.de';
+                        $to_email = 'studio@radio3fm.de';
                         $from_email = $_POST['email'];
                         $subject = 'Neue Nachricht von ' . $_POST['name'];
                         $message = $_POST['message'];
@@ -178,6 +186,11 @@
                 </div>
 
             </div>
+            
+            <div id="content-6" style="display:none;">
+                <h1 style="border-bottom: solid 2px #fff000">Die Radio3FM Spotify-Playlist</h1>
+				<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1hlD8CRVFQ96AbkMi6mu3t?utm_source=generator&theme=1" width="100%" height="750px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
         </div>
 
         <footer class="footer">
@@ -190,6 +203,7 @@
             <div class="footer-column">
                 <ul>
 					<li><strong style="border-bottom: solid 2px #fff000">Seiten</strong></li>
+                    <li>· <a class="link" id="6" href="spotify" draggable="false">Spotify-Playlist</a></li>
                     <li>· <a class="link" id="2" href="neue-musik" draggable="false">Neue Musik</a></li>
                     <li>· <a class="link" id="3" href="neuigkeiten" draggable="false">Neuigkeiten</a></li>
                 </ul>
@@ -204,7 +218,7 @@
         </footer>
         <div align="center" style="color: #177d28">
             <br>
-            2021-<script>document.write(new Date().getFullYear());</script> &copy; All Rights Reserved · www.radio3fm.de
+            2021-<script>document.write(new Date().getFullYear());</script> &copy; All Rights Reserved <br /> www.radio3fm.de
             <br>
         </div>
     </div>
